@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/data-access-samples-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-rpc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-start/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-start/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-task/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-access-samples-task/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
