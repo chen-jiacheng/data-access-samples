@@ -26,36 +26,4 @@ spring:
     mapper-locations: classpath:mapper/*.xml
     type-aliases-package: com.example.demo.model
 ```
-##  3. 数据库表
-```sql
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-```
-
-##  4. 实体类
-```java
-
-package com.example.demo.model;
-
-import lombok.Data;
-
-@Data
-public class User {
-    private Integer id;
-    private String name;
-    private Integer age;
-
-    public User() {
-    }
-
-    public User(Integer id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-}
-```
+https://blog.csdn.net/Agan__/article/details/148384501?spm=1011.2415.3001.5331
