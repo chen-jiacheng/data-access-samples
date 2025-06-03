@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Resource;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -31,17 +32,14 @@ public class SampleUserMapperPerformanceTest extends BaseSpringBootTest {
         int threadCount = cpuCount * 2;
         ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
         for (int i = 0; i < threadCount; i++) {
-            executorService.submit(new SampleUserMapperPerformanceTask(sampleUserMapper, (long) i));
+            executorService.execute(new SampleUserMapperPerformanceTask(sampleUserMapper));
         }
-
         try {
-            new Semaphore(1).acquire();
+            new CountDownLatch(1).await();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        log.info("xxx");
-
-
+        log.info("end");
     }
 
 }

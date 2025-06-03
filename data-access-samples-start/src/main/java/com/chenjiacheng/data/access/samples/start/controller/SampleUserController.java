@@ -3,6 +3,7 @@ package com.chenjiacheng.data.access.samples.start.controller;
 import com.chenjiacheng.data.access.samples.common.model.Result;
 import com.chenjiacheng.data.access.samples.dao.model.SampleUser;
 import com.chenjiacheng.data.access.samples.service.service.SampleUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import java.util.Optional;
  * @author chenjiacheng
  * @since 1.0.0
  */
+@Slf4j
 @RestController
 @RequestMapping("/api/users")
 public class SampleUserController {
@@ -33,21 +35,26 @@ public class SampleUserController {
     public Result<SampleUser> findById(@PathVariable Long id) {
         Optional<SampleUser> user = sampleUserService.findById(id);
         return user.map(Result::success)
-                   .orElse(Result.failure(404, "用户未找到"));
+                .orElse(Result.failure(404, "用户未找到"));
     }
 
     @GetMapping("/username/{username}")
     public Result<SampleUser> findByUsername(@PathVariable String username) {
+        log.info("SampleUserController.findByUsername:request:{}", username);
+        long start = System.currentTimeMillis();
+
         Optional<SampleUser> user = sampleUserService.findByUsername(username);
+        long end = System.currentTimeMillis();
+        log.info("SampleUserController.findByUsername: {}ms result:{}", end-start,user);
         return user.map(Result::success)
-                   .orElse(Result.failure(404, "用户未找到"));
+                .orElse(Result.failure(404, "用户未找到"));
     }
 
     @GetMapping("/email/{email}")
     public Result<SampleUser> findByEmail(@PathVariable String email) {
         Optional<SampleUser> user = sampleUserService.findByEmail(email);
         return user.map(Result::success)
-                   .orElse(Result.failure(404, "用户未找到"));
+                .orElse(Result.failure(404, "用户未找到"));
     }
 
     @PutMapping
